@@ -1,7 +1,11 @@
-// Navbar scroll effect
+// Navbar scroll effect — glass kicks in after #about section
 const navbar = document.getElementById('navbar');
+const aboutSection = document.getElementById('about');
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    const threshold = aboutSection
+        ? aboutSection.offsetTop + aboutSection.offsetHeight
+        : window.innerHeight;
+    navbar.classList.toggle('scrolled', window.scrollY > threshold);
 });
 
 // Mobile menu toggle
