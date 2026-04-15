@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Autoservis Valšov – Michal Novák | Servis, pneuservis, diagnostika, klimatizace, STK</title>
     <meta name="description" content="Autoservis Valšov – komplexní opravy vozidel do 3,5 t, pneuservis, plnění klimatizací, diagnostika, příprava na STK. Valšov 116, Bruntál. Tel: 739 402 949.">
-    <meta name="theme-color" content="#fff7ed">
+    <meta name="theme-color" content="#0d0c0b">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#hero" class="nav-logo">
-                <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/>
                     <circle cx="6.5" cy="16.5" r="2.5"/>
                     <circle cx="16.5" cy="16.5" r="2.5"/>
@@ -25,9 +25,7 @@
                 <span class="logo-text">AUTOSERVIS <small>VALŠOV</small></span>
             </a>
             <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">O nás</a></li>
@@ -38,285 +36,364 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
+        <div class="hero-glow"></div>
+        <div class="container hero-inner">
             <div class="hero-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                Partner sítě Profiauto
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Certifikovaný partner sítě Profiauto
             </div>
-            <h1>Spolehlivý autoservis<br>ve Valšově u <span class="text-gradient">Bruntálu</span></h1>
-            <p class="hero-subtitle">Kompletní opravy osobních a užitkových vozidel do 3,5 t. Pneuservis, klimatizace, diagnostika a příprava na STK.</p>
-            <div class="hero-actions">
-                <a href="tel:+420739402949" class="btn btn-primary btn-lg">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.81 3h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l.93-.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 18.31z"/></svg>
+            <h1>Autoservis,<br>na který se <em>spolehněte</em></h1>
+            <p class="hero-sub">Opravy osobních a užitkových vozidel do 3,5 t. Pneuservis, klimatizace, diagnostika a příprava na STK – vše na jednom místě ve Valšově u Bruntálu.</p>
+            <div class="hero-cta">
+                <a href="tel:+420739402949" class="btn btn-hero-primary">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.81 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l.93-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18.31z"/></svg>
                     739 402 949
                 </a>
-                <a href="#services" class="btn btn-outline btn-lg">Naše služby</a>
+                <a href="#services" class="btn btn-hero-outline">Naše služby</a>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">3,5 t</span>
-                    <span class="stat-label">Max. hmotnost</span>
+            <div class="hero-facts">
+                <div class="fact">
+                    <span class="fact-val">Do 3,5 t</span>
+                    <span class="fact-lbl">Osobní i užitková vozidla</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">8:30–16</span>
-                    <span class="stat-label">Po – Pá</span>
+                <div class="fact-sep"></div>
+                <div class="fact">
+                    <span class="fact-val">Po – Pá</span>
+                    <span class="fact-lbl">8:30 – 16:00</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">350+</span>
-                    <span class="stat-label">Kč / hod</span>
+                <div class="fact-sep"></div>
+                <div class="fact">
+                    <span class="fact-val">od 350 Kč</span>
+                    <span class="fact-lbl">Hodinová sazba</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Trust bar -->
+    <div class="trust-bar">
+        <div class="container trust-inner">
+            <div class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Valšov 116, areál Berto, 792 01 Bruntál
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Otevřeno Po – Pá · 8:30 – 16:00
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.81 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l.93-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18.31z"/></svg>
+                +420 739 402 949
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
     <section class="section" id="about">
-        <div class="container">
-            <div class="section-header fade-in">
+        <div class="container about-layout">
+            <div class="about-text">
                 <span class="section-tag">O nás</span>
-                <h2>Servis s osobním přístupem<br>a důrazem na kvalitu</h2>
-                <p class="section-desc">Jsme rodinný autoservis v areálu firmy Berto ve Valšově u Bruntálu. Opravujeme osobní i lehká užitková vozidla do 3,5 tuny – rychle, poctivě a za přehledné ceny.</p>
+                <h2>Rodinný servis<br>s profesionálním zázemím</h2>
+                <p>Jsme autoservis Michal Novák ve Valšově u Bruntálu. Opravujeme osobní i lehká užitková vozidla do 3,5 tuny – rychle, spolehlivě a za přehledné ceny. Jako certifikovaný partner sítě Profiauto nabízíme servisní standard srovnatelný s autorizovanými servisy.</p>
+                <ul class="about-list">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Certifikovaný partner Profiauto
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Moderní diagnostické vybavení
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Transparentní ceník bez skrytých poplatků
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Pojistné události a náhradní vozidlo
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Objednat se na servis</a>
             </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-icon">🔧</div>
-                    <h3>Mechanické opravy</h3>
-                    <p>Kompletní opravy motoru, převodovky, podvozku, brzd a dalších mechanických systémů vozidel do 3,5 t.</p>
+            <div class="about-highlights">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h4>Mechanické opravy</h4>
+                    <p>Motor, převodovka, podvozek, brzdy</p>
                 </div>
-                <div class="about-card">
-                    <div class="about-icon">💻</div>
-                    <h3>Diagnostika</h3>
-                    <p>Moderní diagnostika chybových kódů, čtení a mazání závad z řídicích jednotek všech systémů vozidla.</p>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h4>Diagnostika</h4>
+                    <p>Čtení chybových kódů všech systémů</p>
                 </div>
-                <div class="about-card">
-                    <div class="about-icon">❄️</div>
-                    <h3>Klimatizace</h3>
-                    <p>Plnění, kontrola a oprava klimatizačních systémů. Cena od 800 Kč – podle množství doplněného chladiva.</p>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20M20 16l-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></svg>
+                    </div>
+                    <h4>Klimatizace</h4>
+                    <p>Plnění a kontrola od 800 Kč</p>
                 </div>
-                <div class="about-card">
-                    <div class="about-icon">🛞</div>
-                    <h3>Pneuservis</h3>
-                    <p>Přezouvání, vyvažování, huštění a drobné opravy pneumatik. Servis osobních i užitkových vozidel.</p>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
+                    </div>
+                    <h4>Pneuservis</h4>
+                    <p>Přezouvání, vyvažování, opravy</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section class="section section-alt" id="services">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <span class="section-tag">Služby</span>
                 <h2>Co u nás zvládneme</h2>
-                <p class="section-desc">Nabízíme kompletní péči o vaše vozidlo – od pravidelného servisu až po náročnější opravy.</p>
+                <p class="section-desc">Komplexní péče o vaše vozidlo – od pravidelného servisu po náročnější opravy.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card service-featured">
-                    <div class="service-badge">Hlavní nabídka</div>
-                    <div class="service-icon">🔩</div>
+
+                <div class="svc-card">
+                    <div class="svc-num">01</div>
+                    <div class="svc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
                     <h3>Mechanické opravy</h3>
-                    <p>Kompletní opravy osobních a lehkých užitkových vozidel do 3,5 tuny. Motor, převodovka, podvozek, brzdy, řízení.</p>
-                    <ul class="service-features">
-                        <li>Vozidla do 10 let: 450 Kč/h</li>
-                        <li>Vozidla nad 10 let: 350 Kč/h</li>
-                        <li>Mechatronika + diagnostika: 750 Kč/h</li>
-                        <li>Elektroinstalace: 500 Kč/h</li>
-                        <li>Ceny bez DPH</li>
-                    </ul>
-                    <a href="tel:+420739402949" class="btn btn-primary">Zavolat a objednat</a>
+                    <p>Kompletní opravy osobních a lehkých užitkových vozidel do 3,5 t. Motor, převodovka, podvozek, brzdy, řízení a další systémy.</p>
+                    <a href="#contact" class="svc-link">Objednat se <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛞</div>
+
+                <div class="svc-card">
+                    <div class="svc-num">02</div>
+                    <div class="svc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+                    </div>
                     <h3>Pneuservis</h3>
-                    <p>Přezouvání, vyvažování, huštění a opravy pneumatik pro osobní i užitková vozidla.</p>
-                    <ul class="service-features">
-                        <li>Do 17": 600 Kč / sada</li>
-                        <li>Nad 17": od 750 Kč</li>
-                        <li>Užitkové: od 700 Kč</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Objednat</a>
+                    <p>Přezouvání, vyvažování, huštění a drobné opravy pneumatik. Osobní i užitková vozidla. Rychle a bez čekání.</p>
+                    <a href="#contact" class="svc-link">Objednat se <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">❄️</div>
+
+                <div class="svc-card">
+                    <div class="svc-num">03</div>
+                    <div class="svc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20M20 16l-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></svg>
+                    </div>
                     <h3>Klimatizace</h3>
-                    <p>Plnění a kontrola klimatizačního systému, detekce úniku chladiva, oprava komponentů.</p>
-                    <ul class="service-features">
-                        <li>Plnění: od 800 Kč</li>
-                        <li>Dle množství chladiva</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Objednat</a>
+                    <p>Plnění chladiva, kontrola těsnosti, oprava komponentů klimatizačního systému. Cena od 800 Kč dle množství chladiva.</p>
+                    <a href="#contact" class="svc-link">Objednat se <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
+
+                <div class="svc-card">
+                    <div class="svc-num">04</div>
+                    <div class="svc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
                     <h3>Diagnostika</h3>
-                    <p>Počítačová diagnostika chybových kódů, reset řídicích jednotek a kontrola všech systémů.</p>
-                    <a href="#contact" class="btn btn-outline">Objednat</a>
+                    <p>Počítačová diagnostika chybových kódů, čtení a mazání závad z řídicích jednotek motoru, převodovky, ABS, airbagy a dalších systémů.</p>
+                    <a href="#contact" class="svc-link">Objednat se <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
+
+                <div class="svc-card">
+                    <div class="svc-num">05</div>
+                    <div class="svc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    </div>
                     <h3>Příprava na STK</h3>
-                    <p>Kompletní příprava vozidla na technickou kontrolu a měření emisí. Odstraníme závady před STK.</p>
-                    <a href="#contact" class="btn btn-outline">Objednat</a>
+                    <p>Důkladná prohlídka a odstranění závad před technickou kontrolou a měřením emisí. Zvýšíme vaše šance na úspěšné absolvování STK.</p>
+                    <a href="#contact" class="svc-link">Objednat se <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
+
+                <div class="svc-card">
+                    <div class="svc-num">06</div>
+                    <div class="svc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
                     <h3>Elektroinstalace</h3>
-                    <p>Opravy elektrických systémů vozidla, tažná zařízení, montáž autoelektroniky a příslušenství.</p>
-                    <a href="#contact" class="btn btn-outline">Objednat</a>
+                    <p>Opravy elektrických systémů vozidla, montáž tažných zařízení, autoelektronika a příslušenství. Sazba 500 Kč/h.</p>
+                    <a href="#contact" class="svc-link">Objednat se <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 </div>
+
             </div>
-            <!-- Extra services strip -->
-            <div class="services-extras">
-                <div class="extra">
-                    <span class="extra-icon">🚗</span>
-                    <span>Odtahová služba</span>
-                </div>
-                <div class="extra">
-                    <span class="extra-icon">🪟</span>
-                    <span>Montáž čelního skla</span>
-                </div>
-                <div class="extra">
-                    <span class="extra-icon">🛡️</span>
-                    <span>Pojistné události</span>
-                </div>
-                <div class="extra">
-                    <span class="extra-icon">🔄</span>
-                    <span>Náhradní vozidlo</span>
-                </div>
-                <div class="extra">
-                    <span class="extra-icon">♻️</span>
-                    <span>Ekologická likvidace</span>
+
+            <!-- Additional services -->
+            <div class="addl-services">
+                <p class="addl-label">Další služby</p>
+                <div class="addl-list">
+                    <div class="addl-item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        Odtahová služba
+                    </div>
+                    <div class="addl-item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        Pojistné události
+                    </div>
+                    <div class="addl-item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h11l5 5v7c0 1.1-.9 2-2 2z"/><path d="M9 17v4M15 17v4M3 9h18"/></svg>
+                        Náhradní vozidlo
+                    </div>
+                    <div class="addl-item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        Montáž čelního skla
+                    </div>
+                    <div class="addl-item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                        Ekologická likvidace vozidla
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Pricing -->
     <section class="section" id="pricing">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <span class="section-tag">Ceník</span>
                 <h2>Přehledné a férové ceny</h2>
-                <p class="section-desc">Všechny ceny jsou bez DPH. Konečná cena závisí na rozsahu prací a použitém materiálu.</p>
+                <p class="section-desc">Ceny jsou bez DPH. Konečná cena závisí na rozsahu prací a použitém materiálu.</p>
             </div>
-            <div class="pricing-grid">
-                <div class="pricing-table fade-in">
-                    <h3>Hodinové sazby</h3>
-                    <div class="price-row">
-                        <span class="price-label">Mechanické práce – vozidla do 10 let</span>
-                        <span class="price-value">450 Kč/h</span>
+            <div class="pricing-wrap">
+                <div class="ptable">
+                    <div class="ptable-head">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        Hodinové sazby
                     </div>
-                    <div class="price-row">
-                        <span class="price-label">Mechanické práce – vozidla nad 10 let</span>
-                        <span class="price-value">350 Kč/h</span>
+                    <div class="ptable-body">
+                        <div class="prow">
+                            <span>Mechanické práce – vozidla do 10 let</span>
+                            <strong>450 Kč/h</strong>
+                        </div>
+                        <div class="prow">
+                            <span>Mechanické práce – vozidla nad 10 let</span>
+                            <strong>350 Kč/h</strong>
+                        </div>
+                        <div class="prow">
+                            <span>Mechatronika a diagnostika</span>
+                            <strong>750 Kč/h</strong>
+                        </div>
+                        <div class="prow">
+                            <span>Elektroinstalace</span>
+                            <strong>500 Kč/h</strong>
+                        </div>
                     </div>
-                    <div class="price-row">
-                        <span class="price-label">Mechatronika a diagnostika</span>
-                        <span class="price-value">750 Kč/h</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">Elektroinstalace</span>
-                        <span class="price-value">500 Kč/h</span>
-                    </div>
-                    <p class="price-note">* Ceny jsou bez DPH. Konečná cena závisí na použitém materiálu a rozsahu opravy.</p>
+                    <p class="ptable-note">Ceny jsou bez DPH. Konečná cena závisí na rozsahu prací a použitém materiálu.</p>
                 </div>
-                <div class="pricing-table fade-in">
-                    <h3>Pneuservis a klimatizace</h3>
-                    <div class="price-row">
-                        <span class="price-label">Přezouvání – osobní (do 17")</span>
-                        <span class="price-value">600 Kč</span>
+                <div class="ptable">
+                    <div class="ptable-head">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
+                        Pneuservis a klimatizace
                     </div>
-                    <div class="price-row">
-                        <span class="price-label">Přezouvání – osobní (nad 17")</span>
-                        <span class="price-value">od 750 Kč</span>
+                    <div class="ptable-body">
+                        <div class="prow">
+                            <span>Přezouvání – osobní vozidla (do 17")</span>
+                            <strong>600 Kč</strong>
+                        </div>
+                        <div class="prow">
+                            <span>Přezouvání – osobní vozidla (nad 17")</span>
+                            <strong>od 750 Kč</strong>
+                        </div>
+                        <div class="prow">
+                            <span>Přezouvání – užitková vozidla</span>
+                            <strong>od 700 Kč</strong>
+                        </div>
+                        <div class="prow prow-accent">
+                            <span>Plnění klimatizace</span>
+                            <strong>od 800 Kč</strong>
+                        </div>
                     </div>
-                    <div class="price-row">
-                        <span class="price-label">Přezouvání – užitková vozidla</span>
-                        <span class="price-value">od 700 Kč</span>
-                    </div>
-                    <div class="price-row highlight">
-                        <span class="price-label">Plnění klimatizace</span>
-                        <span class="price-value">od 800 Kč</span>
-                    </div>
-                    <p class="price-note">* Cena plnění klimatizace závisí na množství potřebného chladiva.</p>
+                    <p class="ptable-note">Cena plnění klimatizace závisí na množství potřebného chladiva.</p>
                 </div>
             </div>
-            <div class="pricing-cta fade-in">
-                <p>Potřebujete nezávazný odhad ceny opravy?</p>
-                <a href="tel:+420739402949" class="btn btn-primary btn-lg">Zavolejte nám: 739 402 949</a>
+            <div class="pricing-footer">
+                <span>Potřebujete nezávazný odhad ceny?</span>
+                <a href="tel:+420739402949" class="btn btn-primary">Zavolejte: 739 402 949</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section class="section section-alt" id="contact">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <span class="section-tag">Kontakt</span>
                 <h2>Najdete nás ve Valšově</h2>
-                <p class="section-desc">Objednejte se telefonicky nebo nám napište. Rádi vám poradíme a domluvíme termín.</p>
+                <p class="section-desc">Objednejte se telefonicky nebo vyplňte formulář. Rádi vám poradíme a domluvíme termín.</p>
             </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-card fade-in">
-                        <div class="contact-icon">📍</div>
+            <div class="contact-layout">
+                <div class="contact-details">
+                    <div class="cdetail">
+                        <div class="cdetail-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
                         <div>
                             <h4>Adresa</h4>
                             <p>Valšov 116<br>(areál firmy Berto)<br>792 01 Bruntál</p>
                         </div>
                     </div>
-                    <div class="contact-card fade-in">
-                        <div class="contact-icon">📞</div>
+                    <div class="cdetail">
+                        <div class="cdetail-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.81 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l.93-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18.31z"/></svg>
+                        </div>
                         <div>
                             <h4>Telefon</h4>
                             <p><a href="tel:+420739402949">739 402 949</a></p>
                         </div>
                     </div>
-                    <div class="contact-card fade-in">
-                        <div class="contact-icon">✉️</div>
+                    <div class="cdetail">
+                        <div class="cdetail-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
                         <div>
                             <h4>E-mail</h4>
                             <p><a href="mailto:info@autoservis-novak.cz">info@autoservis-novak.cz</a></p>
                         </div>
                     </div>
-                    <div class="contact-card fade-in">
-                        <div class="contact-icon">🕐</div>
+                    <div class="cdetail">
+                        <div class="cdetail-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
                         <div>
                             <h4>Otevírací doba</h4>
                             <p>Pondělí – pátek<br>8:30 – 16:00</p>
                         </div>
                     </div>
-                    <div class="contact-card fade-in">
-                        <div class="contact-icon">🆔</div>
+                    <div class="cdetail">
+                        <div class="cdetail-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
                         <div>
                             <h4>IČ</h4>
                             <p>75430606</p>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-wrapper fade-in">
-                    <form class="contact-form" id="contactForm">
+                <div class="contact-form-box">
+                    <form id="contactForm">
                         <h3>Napište nám</h3>
-                        <div class="form-group">
+                        <div class="fgroup">
                             <label for="name">Jméno a příjmení</label>
                             <input type="text" id="name" name="name" placeholder="Jan Novák" required>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
+                        <div class="frow">
+                            <div class="fgroup">
                                 <label for="phone">Telefon</label>
                                 <input type="tel" id="phone" name="phone" placeholder="777 123 456">
                             </div>
-                            <div class="form-group">
+                            <div class="fgroup">
                                 <label for="email">E-mail</label>
                                 <input type="email" id="email" name="email" placeholder="jan@email.cz">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="fgroup">
                             <label for="service">Typ služby</label>
                             <select id="service" name="service">
                                 <option value="">Vyberte službu...</option>
@@ -329,27 +406,24 @@
                                 <option value="jine">Jiné</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="fgroup">
                             <label for="message">Popis závady / zpráva</label>
                             <textarea id="message" name="message" rows="4" placeholder="Popište problém nebo co potřebujete..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-full">Odeslat zprávu</button>
-                        <p class="form-note">Nebo nám rovnou zavolejte na <a href="tel:+420739402949">739 402 949</a></p>
+                        <button type="submit" class="btn btn-primary btn-full">Odeslat poptávku</button>
+                        <p class="form-note">Nebo volejte přímo: <a href="tel:+420739402949">739 402 949</a></p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
+    <!-- Map -->
     <section class="map-section">
         <iframe
             src="https://www.google.com/maps?q=Valšov+116,+792+01+Bruntál&output=embed"
-            width="100%"
-            height="420"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
+            width="100%" height="420" style="border:0;"
+            allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             title="Mapa – Autoservis Valšov, Valšov 116, Bruntál">
         </iframe>
@@ -360,21 +434,18 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#hero" class="nav-logo">
-                        <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <a href="#hero" class="footer-logo">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#e85d04">
                             <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/>
                             <circle cx="6.5" cy="16.5" r="2.5"/>
                             <circle cx="16.5" cy="16.5" r="2.5"/>
                         </svg>
-                        <span class="logo-text">AUTOSERVIS <small>VALŠOV</small></span>
+                        <span>AUTOSERVIS <small>VALŠOV</small></span>
                     </a>
                     <p>Spolehlivé opravy vozidel v Bruntálském kraji. Michal Novák – servis s osobním přístupem.</p>
-                    <div class="profiauto-badge">
-                        <span>Partner sítě</span>
-                        <strong>Profiauto</strong>
-                    </div>
+                    <div class="footer-profiauto">Partner sítě <strong>Profiauto</strong></div>
                 </div>
-                <div class="footer-links">
+                <div class="footer-col">
                     <h4>Navigace</h4>
                     <ul>
                         <li><a href="#about">O nás</a></li>
@@ -383,7 +454,7 @@
                         <li><a href="#contact">Kontakt</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
+                <div class="footer-col">
                     <h4>Služby</h4>
                     <ul>
                         <li><a href="#services">Mechanické opravy</a></li>
@@ -393,16 +464,15 @@
                         <li><a href="#services">Příprava na STK</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
+                <div class="footer-col">
                     <h4>Kontakt</h4>
                     <p><a href="tel:+420739402949">739 402 949</a></p>
                     <p><a href="mailto:info@autoservis-novak.cz">info@autoservis-novak.cz</a></p>
-                    <p>Valšov 116, 792 01 Bruntál</p>
-                    <p>IČ: 75430606</p>
+                    <p>Valšov 116<br>792 01 Bruntál</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Autoservis Valšov – Michal Novák. Všechna práva vyhrazena.</p>
+                <p>&copy; 2026 Autoservis Valšov – Michal Novák</p>
                 <p class="footer-credit">Webdesign: <a href="#" rel="author">Filip Adámek</a></p>
             </div>
         </div>
