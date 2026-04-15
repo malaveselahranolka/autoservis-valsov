@@ -1,7 +1,11 @@
-// Navbar scroll effect — glass kicks in immediately on scroll
+// Navbar scroll effect — black on hero, glass from start of #about
 const navbar = document.getElementById('navbar');
+const heroSection = document.getElementById('hero');
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    const threshold = heroSection
+        ? heroSection.offsetTop + heroSection.offsetHeight - 68
+        : window.innerHeight;
+    navbar.classList.toggle('scrolled', window.scrollY > threshold);
 });
 
 // Mobile menu toggle
