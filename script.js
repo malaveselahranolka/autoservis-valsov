@@ -1,84 +1,125 @@
-// Navbar scroll effect — black on hero, glass from start of #about
+/* ── Navbar: black on hero, glass after ── */
 const navbar = document.getElementById('navbar');
 const heroSection = document.getElementById('hero');
-window.addEventListener('scroll', () => {
+
+function updateNavbar() {
     const threshold = heroSection
         ? heroSection.offsetTop + heroSection.offsetHeight - 68
         : window.innerHeight;
     navbar.classList.toggle('scrolled', window.scrollY > threshold);
-});
+}
+window.addEventListener('scroll', updateNavbar, { passive: true });
+updateNavbar();
 
-// Mobile menu toggle
+/* ── Mobile menu toggle ── */
 const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
+const navLinks  = document.getElementById('navLinks');
 
 navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    navToggle.classList.toggle('active');
-    navbar.classList.toggle('menu-open', navLinks.classList.contains('active'));
+    const isOpen = navLinks.classList.toggle('active');
+    navToggle.classList.toggle('active', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
-// Close mobile menu on link click
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         navToggle.classList.remove('active');
-        navbar.classList.remove('menu-open');
+        document.body.style.overflow = '';
     });
 });
 
-// Scroll-triggered fade-in animations
-const observer = new IntersectionObserver((entries) => {
+/* ── Scroll-triggered animations ── */
+const animObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add('in');
+            animObserver.unobserve(entry.target); // fire once
         }
     });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll(
-    '.about-card, .service-card, .pricing-table, .contact-card, .pricing-cta, .services-extras'
-).forEach(el => {
-    el.classList.add('fade-in');
-    observer.observe(el);
+}, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -36px 0px'
 });
 
-// Stagger animation delays for grid items
-document.querySelectorAll('.about-grid, .services-grid, .contact-info').forEach(grid => {
-    grid.querySelectorAll('.fade-in').forEach((item, i) => {
-        item.style.transitionDelay = `${i * 0.07}s`;
-    });
+// Section headers — fade up
+document.querySelectorAll('.section-header').forEach(el => {
+    el.classList.add('anim');
+    animObserver.observe(el);
 });
 
-// Also observe explicitly marked fade-in elements
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
+// About: text from left, highlights from right
+const aboutText = document.querySelector('.about-text');
+const aboutHL   = document.querySelector('.about-highlights');
+if (aboutText) { aboutText.classList.add('anim', 'anim-left');  animObserver.observe(aboutText); }
+if (aboutHL)   { aboutHL.classList.add('anim', 'anim-right'); animObserver.observe(aboutHL); }
+
+// Highlight cards — staggered
+document.querySelectorAll('.highlight-card').forEach((el, i) => {
+    el.classList.add('anim');
+    el.style.transitionDelay = `${i * 0.08}s`;
+    animObserver.observe(el);
 });
 
-// Contact form – open mailto
+// Service cards — staggered fade up
+document.querySelectorAll('.svc-card').forEach((el, i) => {
+    el.classList.add('anim');
+    el.style.transitionDelay = `${i * 0.07}s`;
+    animObserver.observe(el);
+});
+
+// Additional service cards — staggered scale in
+document.querySelectorAll('.addl-card').forEach((el, i) => {
+    el.classList.add('anim', 'anim-scale');
+    el.style.transitionDelay = `${i * 0.06}s`;
+    animObserver.observe(el);
+});
+
+// Pricing tables — fade up with slight stagger
+document.querySelectorAll('.ptable').forEach((el, i) => {
+    el.classList.add('anim');
+    el.style.transitionDelay = `${i * 0.12}s`;
+    animObserver.observe(el);
+});
+const pricingFooter = document.querySelector('.pricing-footer');
+if (pricingFooter) { pricingFooter.classList.add('anim'); animObserver.observe(pricingFooter); }
+
+// Contact details — staggered left
+document.querySelectorAll('.cdetail').forEach((el, i) => {
+    el.classList.add('anim', 'anim-left');
+    el.style.transitionDelay = `${i * 0.07}s`;
+    animObserver.observe(el);
+});
+
+// Contact form — from right
+const formBox = document.querySelector('.contact-form-box');
+if (formBox) { formBox.classList.add('anim', 'anim-right'); animObserver.observe(formBox); }
+
+// Trust bar items
+document.querySelectorAll('.trust-item').forEach((el, i) => {
+    el.classList.add('anim');
+    el.style.transitionDelay = `${i * 0.1}s`;
+    animObserver.observe(el);
+});
+
+/* ── Contact form → mailto ── */
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const phone = formData.get('phone');
-    const email = formData.get('email');
-    const service = formData.get('service');
-    const message = formData.get('message');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const d = new FormData(contactForm);
+        let body = `Jméno: ${d.get('name')}\n`;
+        if (d.get('phone'))   body += `Telefon: ${d.get('phone')}\n`;
+        if (d.get('email'))   body += `E-mail: ${d.get('email')}\n`;
+        if (d.get('service')) body += `Služba: ${d.get('service')}\n`;
+        if (d.get('message')) body += `\nPopis:\n${d.get('message')}`;
+        window.location.href = `mailto:info@autoservis-novak.cz?subject=${encodeURIComponent('Poptávka z webu – ' + d.get('name'))}&body=${encodeURIComponent(body)}`;
+    });
+}
 
-    let body = `Jméno: ${name}\n`;
-    if (phone) body += `Telefon: ${phone}\n`;
-    if (email) body += `E-mail: ${email}\n`;
-    if (service) body += `Služba: ${service}\n`;
-    if (message) body += `\nPopis:\n${message}`;
-
-    const mailto = `mailto:info@autoservis-novak.cz?subject=${encodeURIComponent('Poptávka z webu – ' + name)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+/* ── Smooth scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             e.preventDefault();
