@@ -1040,30 +1040,55 @@ img { max-width: 100%; display: block; }
     /* Nav */
     .nav-toggle { display: flex; }
 
+    /* Hide links by default on mobile — shown only when .active */
     .nav-links {
+        display: none;
         position: fixed;
         top: 68px; left: 0; right: 0;
+        z-index: 99;
         flex-direction: column;
         align-items: stretch;
+        gap: 4px;
         padding: 16px 20px 24px;
-        background: rgba(13,12,11,0.96);
+        background: rgba(13, 12, 11, 0.97);
         backdrop-filter: blur(24px) saturate(160%);
         -webkit-backdrop-filter: blur(24px) saturate(160%);
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-        transform: translateY(-110%);
-        transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
-        gap: 4px;
+        border-bottom: 1px solid rgba(255,255,255,0.10);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.4);
     }
-    .nav-links.active  { transform: translateY(0); }
+
+    .nav-links.active {
+        display: flex;
+        animation: menuSlideDown 0.25s cubic-bezier(0.16,1,0.3,1) both;
+    }
+
+    @keyframes menuSlideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
     .nav-links a {
-        padding: 12px 14px;
-        color: rgba(255,255,255,0.85);
+        padding: 13px 16px;
+        color: rgba(255,255,255,0.85) !important;
         border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
     }
-    .navbar.scrolled .nav-links {
-        background: rgba(255,255,255,0.96);
+
+    .nav-links a:hover {
+        background: rgba(255,255,255,0.08);
+        color: var(--white) !important;
     }
-    .navbar.scrolled .nav-links a { color: var(--text); }
+
+    /* Kontakt btn inside the menu */
+    .nav-links .btn-nav {
+        margin-top: 8px;
+        width: 100%;
+        text-align: center;
+        padding: 13px 16px;
+        border-radius: 8px;
+        justify-content: center;
+    }
 
     /* Hero */
     .hero { padding: 104px 0 56px; min-height: auto; }
